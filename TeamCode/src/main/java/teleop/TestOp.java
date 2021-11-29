@@ -25,12 +25,10 @@ public class TestOp extends OpMode implements Common {
     @Override
     public void loop() {
         update(true);
-        bot.mechDrive.move(gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_trigger);
+        bot.mechDrive.move(gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.touchpad_finger_1_x);
         bot.carousel.CarouselSpin(gamepad1.left_trigger);
-        bot.Intake.Intake(gamepad1.right_stick_y);
+        bot.Intake.Intake(gamepad1.right_trigger);
         bot.outtake.lift(gamepad1.right_stick_y);
-        bot.outtake.lock();
-        bot.outtake.unlock();
 
     }
 

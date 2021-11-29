@@ -15,8 +15,6 @@ public class Outtake extends RobotPart{
         // TODO: SET DIRECTIONS
         Armleft = createMotor("lift1", DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE, DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         Armright = createMotor("lift2", DcMotorSimple.Direction.FORWARD, DcMotor.ZeroPowerBehavior.BRAKE, DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        outtakeLock = createServo("outtakeLock", Servo.Direction.FORWARD, 0, 1);
-
     }
 
     public void lift(double power){
@@ -24,10 +22,5 @@ public class Outtake extends RobotPart{
         Armright.setPower(power);
 
     }
-    public void lock() {
-        outtakeLock.setPosition(1);
-    }
-    public void unlock() {
-        outtakeLock.setPosition(0);
-    }
+
 }
